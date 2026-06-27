@@ -574,7 +574,10 @@
     .tl-title { font-family: var(--ff-display); font-weight: 600; color: var(--text); margin-bottom: 0.2rem; }
     .tl-org { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem; }
     .tl-desc { font-size: 0.875rem; color: var(--text-faint); }
-    .parcours-aside {}
+    .parcours-aside {
+      display: grid;
+      gap: 1.5rem;
+    }
     .cert-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -737,16 +740,24 @@
       .project-card { grid-template-columns: 1fr; }
       .project-visual { min-height: 200px; }
       .parcours-layout { grid-template-columns: 1fr; }
+      .timeline { padding-left: 0.75rem; }
+      .timeline::before { left: 0.25rem; }
+      .tl-item { padding-left: 1.5rem; }
       .contact-inner { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; align-items: center; text-align: center; }
       .about-badge { right: 0; bottom: -1rem; }
       .about-info-grid { grid-template-columns: 1fr; }
+      .cert-card { flex-direction: column; align-items: flex-start; }
+      .project-links { flex-direction: column; }
     }
     @media (max-width: 600px) {
       .container { padding: 0 1.25rem; }
       .hero-actions { flex-direction: column; }
       .btn-primary, .btn-secondary { text-align: center; display: block; }
+      .parcours-layout { gap: 2rem; }
+      .timeline::before { left: 0.15rem; }
+      .tl-item { padding-left: 1.35rem; }
     }
 
     /* ===== CUSTOM select arrow ===== */
